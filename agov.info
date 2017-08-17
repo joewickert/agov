@@ -54,6 +54,7 @@ dependencies[] = date
 dependencies[] = defaultconfig
 dependencies[] = defaultcontent
 dependencies[] = diff
+dependencies[] = drafty
 dependencies[] = draggableviews
 dependencies[] = ds
 dependencies[] = elements
