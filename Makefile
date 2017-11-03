@@ -29,7 +29,7 @@ EXPORT_MODULES=agov agov_standard_page agov_article agov_publication agov_defaul
 
 TEST_FILTER=--module agov
 
-.PHONY: list build make make-contrib make-core install test
+.PHONY: list build make make-contrib make-core install test config-export
 
 # Display a list of the commands
 list:
