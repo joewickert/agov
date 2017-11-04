@@ -1,0 +1,8 @@
+name: aGov Sitemap
+type: module
+description: Enable and configure a sitemap for use with aGov.
+package: aGov
+core: '8.x'
+
+dependencies:
+  - simple_sitemap

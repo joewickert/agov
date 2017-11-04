@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    content:
+      - 'block_content:editorial_content:af171e09-fcb2-4d93-a94d-77dc61aab213'
+      - 'block_content:editorial_content:fa3e8c87-7002-4c75-9e37-556fa5573f38'
+      - 'block_content:icon_block:30a54cec-dd24-4c1c-9f61-97c1ff9e1965'
+      - 'block_content:icon_block:608c6fc7-2769-4756-a300-fe79586cdb37'
+      - 'block_content:icon_block:d2519df9-3664-4911-9b00-eaeec473440c'
+      - 'block_content:promotional_block:2f69d5fd-a34c-412c-a514-20fe2197b501'
+      - 'block_content:promotional_block:8e22eeef-05cb-48de-a100-e23f3bf707bf'
+      - 'block_content:promotional_block:c5ac2614-aaa8-43e8-9315-21e2beece358'
+      - 'block_content:social_block:69e9555f-f0f3-4dd6-b905-5b1efffa120f'
+id: home
+label: Home
+use_admin_theme: false
+path: /home
+access_logic: and
+access_conditions: {  }
+parameters: {  }

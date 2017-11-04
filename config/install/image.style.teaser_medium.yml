@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: teaser_medium
+label: 'Teaser Medium'
+effects:
+  072d51cf-277d-49d5-8106-6d8f89e58afc:
+    uuid: 072d51cf-277d-49d5-8106-6d8f89e58afc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 365
+      height: 205

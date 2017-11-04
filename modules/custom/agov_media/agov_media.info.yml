@@ -1,0 +1,41 @@
+name: aGov Media
+type: module
+description: 'Adds media handling to aGov.'
+package: aGov
+core: '8.x'
+
+dependencies:
+  - media_entity
+  - media_entity_image
+  - video_embed_media
+  - entity_embed
+  - entity_browser
+  - media_entity_browser
+  - entity_browser_entity_form
+
+config_devel:
+  - core.entity_form_display.media.image.default
+  - core.entity_form_display.media.video.default
+  - core.entity_view_display.media.image.default
+  - core.entity_view_display.media.video.default
+  - field.field.media.image.field_media_image
+  - field.field.media.video.field_media_video_embed_field
+  - field.storage.media.field_media_image
+  - field.storage.media.field_media_video_embed_field
+  - media_entity.bundle.image
+  - media_entity.bundle.video
+  - filter.format.text_and_media
+  - editor.editor.text_and_media
+  - entity_browser.browser.media_browser
+  - image.style.media_preview
+  - image.style.full_page_wide
+  - core.entity_view_mode.media.full_page
+  - core.entity_view_mode.media.preview
+  - core.entity_view_mode.media.teaser
+  - core.entity_view_display.media.image.full_page
+  - core.entity_view_display.media.image.preview
+  - core.entity_view_display.media.image.teaser
+  - core.entity_view_display.media.video.full_page
+  - core.entity_view_display.media.video.preview
+  - core.entity_view_display.media.video.teaser
+  - image.style.media_teaser_medium

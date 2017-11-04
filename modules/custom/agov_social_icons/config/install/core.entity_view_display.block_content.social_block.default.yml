@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_block
+    - field.field.block_content.social_block.field_social_icon
+  module:
+    - fences
+    - link
+id: block_content.social_block.default
+targetEntityType: block_content
+bundle: social_block
+mode: default
+content:
+  field_social_icon:
+    weight: 0
+    label: visually_hidden
+    settings:
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+      trim_length: 80
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: social__wrapper
+        fences_field_item_tag: div
+        fences_field_item_classes: social__item
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: link
+    region: content
+hidden: {  }

@@ -1,0 +1,199 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home
+    - system.menu.quick-links
+    - views.view.latest_updates
+  enforced:
+    content:
+      - 'block_content:editorial_content:af171e09-fcb2-4d93-a94d-77dc61aab213'
+      - 'block_content:editorial_content:fa3e8c87-7002-4c75-9e37-556fa5573f38'
+      - 'block_content:icon_block:30a54cec-dd24-4c1c-9f61-97c1ff9e1965'
+      - 'block_content:icon_block:608c6fc7-2769-4756-a300-fe79586cdb37'
+      - 'block_content:icon_block:d2519df9-3664-4911-9b00-eaeec473440c'
+      - 'block_content:promotional_block:2f69d5fd-a34c-412c-a514-20fe2197b501'
+      - 'block_content:promotional_block:8e22eeef-05cb-48de-a100-e23f3bf707bf'
+      - 'block_content:promotional_block:c5ac2614-aaa8-43e8-9315-21e2beece358'
+      - 'block_content:social_block:69e9555f-f0f3-4dd6-b905-5b1efffa120f'
+  module:
+    - panels
+    - system
+    - twitter_block
+    - views
+id: panels
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    525224fe-81ef-4e81-a201-1cbf795cb5ec:
+      id: 'block_content:fa3e8c87-7002-4c75-9e37-556fa5573f38'
+      label: 'Discover aGov'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: header_right
+      weight: 0
+      uuid: 525224fe-81ef-4e81-a201-1cbf795cb5ec
+      context_mapping: {  }
+    99ee011c-f2a2-4cb3-8c4b-75fc128e0e61:
+      id: 'block_content:2f69d5fd-a34c-412c-a514-20fe2197b501'
+      label: 'Promo Block 1'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: promo_1
+      weight: 0
+      uuid: 99ee011c-f2a2-4cb3-8c4b-75fc128e0e61
+      context_mapping: {  }
+    ed7fd3d3-b1a0-4c26-b045-699086d02123:
+      id: 'block_content:8e22eeef-05cb-48de-a100-e23f3bf707bf'
+      label: 'Promo Block 2'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: promo_2
+      weight: 0
+      uuid: ed7fd3d3-b1a0-4c26-b045-699086d02123
+      context_mapping: {  }
+    8c7e8d7c-61e6-4cd9-8a08-8d18d98d1614:
+      id: 'block_content:c5ac2614-aaa8-43e8-9315-21e2beece358'
+      label: 'Promo Block 3'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: promo_3
+      weight: 0
+      uuid: 8c7e8d7c-61e6-4cd9-8a08-8d18d98d1614
+      context_mapping: {  }
+    c70b9a47-bb4e-40d5-9500-a64471c6e447:
+      id: 'views_block:latest_updates-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: body_left
+      weight: 0
+      uuid: c70b9a47-bb4e-40d5-9500-a64471c6e447
+      context_mapping: {  }
+    bf33dd19-c3a3-49e0-9039-576aadd62053:
+      id: twitter_block
+      label: 'Twitter feed'
+      provider: twitter_block
+      label_display: visible
+      widget_id: '360632154172030979'
+      theme: ''
+      link_color: ''
+      width: ''
+      height: ''
+      chrome:
+        noheader: 0
+        nofooter: 0
+        noborders: 0
+        noscrollbar: 0
+        transparent: 0
+      border_color: ''
+      language: ''
+      tweet_limit: ''
+      related: ''
+      polite: polite
+      region: body_right
+      weight: -10
+      uuid: bf33dd19-c3a3-49e0-9039-576aadd62053
+      context_mapping: {  }
+    b5653be6-074d-42b1-8f00-d42a65c520f5:
+      id: 'system_menu_block:quick-links'
+      label: 'Quick Links'
+      provider: system
+      label_display: visible
+      level: '1'
+      depth: '0'
+      region: body_right
+      weight: -9
+      uuid: b5653be6-074d-42b1-8f00-d42a65c520f5
+      expand_all_items: 0
+      context_mapping: {  }
+    fdfe7e49-b906-456a-8156-864b7c371906:
+      id: 'block_content:69e9555f-f0f3-4dd6-b905-5b1efffa120f'
+      label: 'Stay up to date'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: body_right
+      weight: -8
+      uuid: fdfe7e49-b906-456a-8156-864b7c371906
+      context_mapping: {  }
+    4fb1ce32-0633-49df-bb00-f7f6b4a93450:
+      id: 'block_content:d2519df9-3664-4911-9b00-eaeec473440c'
+      label: 'Icon block 1'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: footer_1
+      weight: 0
+      uuid: 4fb1ce32-0633-49df-bb00-f7f6b4a93450
+      context_mapping: {  }
+    ddb95c8b-1829-469a-8800-0c1e64e8cf52:
+      id: 'block_content:608c6fc7-2769-4756-a300-fe79586cdb37'
+      label: 'Icon block 2'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: footer_2
+      weight: 0
+      uuid: ddb95c8b-1829-469a-8800-0c1e64e8cf52
+      context_mapping: {  }
+    050334da-e2ac-4f59-a35b-91d5b9927e57:
+      id: 'block_content:30a54cec-dd24-4c1c-9f61-97c1ff9e1965'
+      label: 'Icon block 3'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: footer_3
+      weight: 0
+      uuid: 050334da-e2ac-4f59-a35b-91d5b9927e57
+      context_mapping: {  }
+    b48e1747-715e-4a33-901f-31387b5adba2:
+      id: 'block_content:af171e09-fcb2-4d93-a94d-77dc61aab213'
+      label: 'Homepage Blurb'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: header_left
+      weight: 0
+      uuid: b48e1747-715e-4a33-901f-31387b5adba2
+      context_mapping: {  }
+  id: panels_variant
+  uuid: b4d7937b-4a98-4fcd-8100-cfc8255fae96
+  label: null
+  weight: 0
+  layout: landing_page
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: panels
+  builder: standard
+page: home
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

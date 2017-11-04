@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.promotional_block
+    - field.field.block_content.promotional_block.field_link
+    - field.field.block_content.promotional_block.field_promotional_description
+    - field.field.block_content.promotional_block.field_promotional_image
+    - field.field.block_content.promotional_block.field_promotional_title
+    - image.style.teaser_medium
+  module:
+    - fences
+    - image
+id: block_content.promotional_block.default
+targetEntityType: block_content
+bundle: promotional_block
+mode: default
+content:
+  field_promotional_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_promotional_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: teaser_medium
+      image_link: content
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: image
+    region: content
+  field_promotional_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: true
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: teaser__title
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden:
+  field_link: true

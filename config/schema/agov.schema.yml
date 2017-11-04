@@ -1,0 +1,2 @@
+field.formatter.settings.text_icon:
+  type: field.formatter.settings.string

@@ -1,0 +1,18 @@
+.vagrant
+/bin
+/vendor
+/build
+
+# Exclude build files created by gulp and kss-node.
+/agov/themes/agov/*/css/
+/agov/styleguide
+/styleguide
+
+# Exclude files added by drush make
+/agov/libraries/*
+/agov/modules/contrib
+/agov/modules/development
+/agov/themes/contrib
+/app
+.DS_Store
+/.idea

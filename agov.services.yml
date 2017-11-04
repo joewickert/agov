@@ -1,0 +1,9 @@
+services:
+  agov.http_exception:
+    class: Drupal\agov\EventSubscriber\Agov4032404Subscriber
+    tags:
+      - { name: event_subscriber }
+  agov.config_devel_save:
+    class: Drupal\agov\EventSubscriber\AgovConfigDevelSubscriber
+    tags:
+      - { name: event_subscriber }

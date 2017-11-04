@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: quick-links
+label: 'Quick Links'
+description: 'The quick links in the right hand side bar.'
+locked: false

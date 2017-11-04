@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.icon_block
+    - field.field.block_content.icon_block.field_icon_block_description
+    - field.field.block_content.icon_block.field_icon_block_icon
+    - field.field.block_content.icon_block.field_icon_block_title
+  module:
+    - fences
+    - link
+    - text_icon
+id: block_content.icon_block.default
+targetEntityType: block_content
+bundle: icon_block
+mode: default
+content:
+  field_icon_block_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: box--icon__right
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_icon_block_icon:
+    weight: 0
+    label: hidden
+    settings:
+      icon_sprite: /profiles/agov/themes/contrib/agov_base/sass/base/icons/sprite--content.svg
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: box--icon__left
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: text_icon
+    region: content
+  field_icon_block_title:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: box__title
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: link
+    region: content
+hidden: {  }

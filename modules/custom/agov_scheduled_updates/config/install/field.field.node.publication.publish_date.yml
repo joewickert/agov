@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.publish_date
+    - node.type.publication
+    - scheduled_updates.scheduled_update_type.scheduled_publications
+id: node.publication.publish_date
+field_name: publish_date
+entity_type: node
+bundle: publication
+label: 'Scheduled publishing'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:scheduled_update'
+  handler_settings:
+    target_bundles:
+      scheduled_publications: scheduled_publications
+    sort:
+      field: _none
+field_type: entity_reference

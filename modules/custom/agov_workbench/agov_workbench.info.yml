@@ -1,0 +1,8 @@
+name: aGov Workbench Moderation
+type: module
+description: 'Provide Workbench Moderation integration.'
+package: aGov
+core: '8.x'
+
+dependencies:
+  - workbench_moderation

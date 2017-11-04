@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: content
+label: Content
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  7902159e-cf56-427e-ad00-dda6a91c5641:
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      standard_page: standard_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7902159e-cf56-427e-ad00-dda6a91c5641
+selection_logic: and
+weight: -5
+relationships: {  }

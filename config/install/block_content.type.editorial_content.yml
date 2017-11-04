@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: editorial_content
+label: 'Editorial Content'
+revision: 0
+description: 'Create a block with editorial content.'

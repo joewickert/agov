@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - agov_whitlam
+id: searchform
+theme: agov_whitlam
+region: highlighted
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/search/*'
+    negate: true
+    context_mapping: {  }

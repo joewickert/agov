@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the aGov test module.
+ */
+
+/**
+ * Implements hook_install_tasks().
+ */
+function agov_test_profile_install_tasks(&$install_state) {
+  // We're testing the agov configurable dependencies form but we have to
+  // implement hook_install_tasks() in a test install profile so we can have
+  // fake configurable dependencies. This form wouldn't normally be included
+  // since we're not installing with aGov, so manually include it.
+  require_once __DIR__ . '/../../src/Form/ConfigurableProfileDependenciesForm.php';
+
+  return [
+    'configurable_profile_dependencies' => [
+      'display_name' => t('Configurable Modules'),
+      'display' => TRUE,
+      'type' => 'form',
+      'function' => 'Drupal\agov\Form\ConfigurableProfileDependenciesForm',
+    ],
+  ];
+}

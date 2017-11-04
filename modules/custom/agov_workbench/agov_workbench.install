@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * The aGov Workbench Moderation install file.
+ */
+
+use Drupal\node\Entity\NodeType;
+
+/**
+ * Implements hook_install().
+ */
+function agov_workbench_install() {
+
+  // Enable moderation for all content types.
+  foreach (NodeType::loadMultiple() as $type) {
+    $type
+      ->setThirdPartySetting('workbench_moderation', 'enabled', TRUE)
+      ->setThirdPartySetting('workbench_moderation', 'allowed_moderation_states', [
+        'archived',
+        'draft',
+        'needs_review',
+        'published',
+      ])
+      ->setThirdPartySetting('workbench_moderation', 'default_moderation_state', 'draft')
+      ->save();
+  }
+}

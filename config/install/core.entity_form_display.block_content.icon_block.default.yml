@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.icon_block
+    - field.field.block_content.icon_block.field_icon_block_description
+    - field.field.block_content.icon_block.field_icon_block_icon
+    - field.field.block_content.icon_block.field_icon_block_title
+  module:
+    - link
+id: block_content.icon_block.default
+targetEntityType: block_content
+bundle: icon_block
+mode: default
+content:
+  field_icon_block_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_icon_block_icon:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_icon_block_title:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: publications
+label: Publications
+type: 'canonical_entities:node'
+pattern: '/publications/[node:title]'
+selection_criteria:
+  ad15bec1-53b6-4d2c-8600-b69b3f8c1430:
+    id: 'entity_bundle:node'
+    bundles:
+      publication: publication
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ad15bec1-53b6-4d2c-8600-b69b3f8c1430
+selection_logic: and
+weight: -5
+relationships: {  }

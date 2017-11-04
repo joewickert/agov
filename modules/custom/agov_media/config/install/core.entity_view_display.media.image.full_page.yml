@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full_page
+    - field.field.media.image.field_media_image
+    - image.style.full_page_wide
+    - media_entity.bundle.image
+  module:
+    - fences
+    - image
+id: media.image.full_page
+targetEntityType: media
+bundle: image
+mode: full_page
+content:
+  field_media_image:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: full_page_wide
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

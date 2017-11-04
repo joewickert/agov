@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: media_preview
+label: 'Media Preview'
+effects:
+  6dc26bb8-2ee7-4907-a225-4fdccc3bdfd2:
+    uuid: 6dc26bb8-2ee7-4907-a225-4fdccc3bdfd2
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      upscale: false

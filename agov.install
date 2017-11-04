@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the aGov profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function agov_install() {
+  // The system.site config entity must be configured during install.
+  \Drupal::configFactory()->getEditable('system.site')
+    ->set('mail', 'admin@agov.com.au')
+    ->set('name', 'aGov')
+    ->set('page.front', '/home')
+    ->save();
+}
+
+/**
+ * Implements hook_install_tasks().
+ */
+function agov_install_tasks(&$install_state) {
+  return [
+    'configurable_profile_dependencies' => [
+      'display_name' => t('Configurable Modules'),
+      'display' => TRUE,
+      'type' => 'form',
+      'function' => 'Drupal\agov\Form\ConfigurableProfileDependenciesForm',
+    ],
+  ];
+}

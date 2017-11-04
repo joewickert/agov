@@ -1,0 +1,174 @@
+name: aGov
+type: profile
+description: A distribution for government and the public sector in Australia.
+core: 8.x
+
+dependencies:
+  # Core modules
+  - node
+  - block
+  - ckeditor
+  - config
+  - comment
+  - contextual
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
+  - editor
+  - entity_reference
+  - help
+  - image
+  - layout_discovery
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - taxonomy
+  - search
+  - shortcut
+  - toolbar
+  - field_ui
+  - file
+  - rdf
+  - views
+  - views_ui
+  - link
+  - filter
+  - dynamic_page_cache
+
+  # Contrib modules
+  - admin_toolbar
+  - better_normalizers
+  - pathauto
+  - twitter_block
+  - page_manager
+  - fences
+  - token
+  - text_icon
+
+  # Custom modules
+  - agov_article
+  - agov_standard_page
+  - agov_social_icons
+  - agov_publication
+  - agov_media
+
+configurable_dependencies:
+  agov_default_content:
+    label: aGov Default Content
+    description: Provides default content so you can see the aGov features in action.
+    enabled: true
+  agov_password_policy:
+    label: aGov Password Policy
+    description: Provides Australian standard password policies
+    enabled: true
+  agov_workbench:
+    label: aGov Workbench
+    description: Integration with Workbench Moderation
+    enabled: true
+  metatag_dc:
+    label: Dublin Core Metatags
+    description: Adds support for Dublin Core metatags.
+    enabled: true
+  agov_scheduled_updates:
+    label: Scheduled Updates
+    description: Add support for scheduled content publishing.
+    enabled: true
+  agov_sitemap:
+    label: aGov Sitemap
+    description: Installs the simple sitemap_sitemap module and configures for use with the aGov content types.
+    enabled: true
+
+themes:
+  - agov_base
+  - agov_whitlam
+  - seven
+
+config_devel:
+  # Global config.
+  - system.theme
+  - search.settings
+  - node.settings
+  - core.date_format.publication_date
+  - editor.editor.basic_html
+  - block.block.sitebranding
+  - pathauto.settings
+  - pathauto.pattern.content
+  - image.style.teaser_medium
+
+  # Permissions.
+  - user.role.anonymous
+  - user.role.authenticated
+
+  # Filter formats
+  - filter.format.basic_html
+  - filter.format.full_html
+  - filter.format.restricted_html
+
+  # Blocks
+  - block.block.mainnavigation
+  - block.block.mainnavigation_2
+  - block.block.searchform
+  - block.block.searchform
+  - block.block.seven_breadcrumbs
+  - block.block.seven_content
+  - block.block.seven_help
+  - block.block.seven_local_actions
+  - block.block.seven_login
+  - block.block.seven_messages
+  - block.block.seven_primary_local_tasks
+  - block.block.seven_secondary_local_tasks
+  - block.block.breadcrumbs
+  - block.block.pagetitle
+  - block.block.quicklinks
+  - block.block.quicklinks_2
+  - block.block.footerquicklinks
+  - block.block.mainnavigation_3
+
+  # Menus
+  - system.menu.quick-links
+  - system.menu.footer-quick-links
+
+  # Promotional Blocks
+  - block_content.type.promotional_block
+  - core.entity_form_display.block_content.promotional_block.default
+  - core.entity_view_display.block_content.promotional_block.default
+  - field.field.block_content.promotional_block.field_promotional_description
+  - field.field.block_content.promotional_block.field_promotional_image
+  - field.field.block_content.promotional_block.field_promotional_title
+  - field.storage.block_content.field_promotional_description
+  - field.storage.block_content.field_promotional_image
+  - field.storage.block_content.field_promotional_title
+  - field.storage.block_content.field_link
+  - field.field.block_content.promotional_block.field_link
+
+  # Contact page.
+  - contact.form.contact
+  - contact.settings
+
+  # Editorial Block
+  - field.field.block_content.editorial_content.body
+  - core.entity_form_display.block_content.editorial_content.default
+  - core.entity_view_display.block_content.editorial_content.default
+  - block_content.type.editorial_content
+
+  # Icon block.
+  - block_content.type.icon_block
+  - core.entity_form_display.block_content.icon_block.default
+  - core.entity_view_display.block_content.icon_block.default
+  - field.field.block_content.icon_block.field_icon_block_description
+  - field.field.block_content.icon_block.field_icon_block_icon
+  - field.field.block_content.icon_block.field_icon_block_title
+  - field.storage.block_content.field_icon_block_description
+  - field.storage.block_content.field_icon_block_icon
+  - field.storage.block_content.field_icon_block_title
+
+  # Search
+  - block.block.searchform
+  - block.block.searchform_2
+  - core.entity_view_mode.node.search_index
+  - core.entity_view_mode.node.search_result
+  - search.page.node_search
+  - search.page.user_search

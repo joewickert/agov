@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: promotional_block
+label: 'Promotional Block'
+revision: 0
+description: 'A promotional block that advertises a piece of content and can be used throughout the site.'

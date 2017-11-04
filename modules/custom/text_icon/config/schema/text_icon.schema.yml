@@ -1,0 +1,7 @@
+field.formatter.settings.text_icon:
+  type: mapping
+  label: 'Text Icon field display format settings'
+  mapping:
+    icon_sprite:
+      type: string
+      label: 'Icon sprite location'
