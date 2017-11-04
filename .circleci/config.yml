@@ -24,6 +24,8 @@ jobs:
 
       - image: previousnext/gastonjs:1.0.2
 
+      - image: mailhog/mailhog
+
     working_directory: /data
 
     steps:
@@ -31,8 +33,8 @@ jobs:
 
       - restore_cache:
           keys:
-            - APP_NAME-v1-{{ arch }}-{{ checksum "composer.lock" }}-{{ checksum "yarn.lock" }}
-            - APP_NAME-v1-{{ arch }}
+            - agov-v1-{{ arch }}-{{ checksum "composer.lock" }}
+            - agov-v1-{{ arch }}
 
       - run:
           name: "Install dependencies"
@@ -41,10 +43,9 @@ jobs:
             make mkdirs
 
       - save_cache:
-          key: APP_NAME-v1-{{ arch }}-{{ checksum "composer.lock" }}-{{ checksum "yarn.lock" }}
+          key: agov-v1-{{ arch }}-{{ checksum "composer.lock" }}
           paths:
             - /root/.composer
-            - /usr/local/share/.cache/yarn
 
       - run:
           name: Lint
