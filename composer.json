@@ -51,9 +51,13 @@
         "drush/drush": "^8.1.15"
     },
     "require-dev": {
+        "behat/mink": "1.7.x-dev",
+        "behat/mink-goutte-driver": "~1.2",
         "drupal-composer/drupal-scaffold": "~2.2",
         "drupal/coder": "~8.2",
         "drupal/config_devel": "~1.0",
+        "jcalderonzumba/gastonjs": "~1.0.2",
+        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
         "mikey179/vfsStream": "~1.2",
         "phpunit/phpunit": ">=4.8.28 <5",
         "vimeo/psalm": "^0.3.39"
@@ -83,6 +87,9 @@
             ]
         },
         "patches": {
+            "drupal/core": {
+                "Expand all items": "https://www.drupal.org/files/issues/drupal-8.3.0-menu-expand-all-items-2594425-89.patch"
+            },
             "drupal/page_manager": {
                 "Fix contextual links on page manager pages": "https://www.drupal.org/files/issues/page_manager-block_content_contextual-2601004-14.patch"
             },
