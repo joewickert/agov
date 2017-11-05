@@ -24,8 +24,6 @@ jobs:
 
       - image: previousnext/gastonjs:1.0.2
 
-      - image: mailhog/mailhog
-
     working_directory: /data
 
     steps:
