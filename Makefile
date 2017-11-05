@@ -39,7 +39,7 @@ link-profile:
 	cd $(APP_ROOT)/profiles/agov && ln -svf ../../../agov.* ../../../config ../../../modules ../../../src ../../../tests .
 
 install:
-	$(DRUSH) site-install agov --site-name=aGov --account-pass='${APP_PASSWORD}' --db-url=${DB_URL} -y
+	$(DRUSH) site-install agov --site-name=aGov --account-pass='${APP_PASSWORD}' --db-url=${DB_URL} install_configure_form.enable_update_status_module=NULL -y
 
 config-export:
 	$(DRUSH) config-devel-export ${EXPORT_MODULES}
