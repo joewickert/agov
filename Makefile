@@ -87,7 +87,7 @@ test-ci:
 test: test-unit test-functional
 
 test-unit:
-	echo "Mink args: $MINK_DRIVER_ARGS"
+	echo "Mink args: $(MINK_DRIVER_ARGS)"
 	./bin/phpunit $(APP_ROOT)/profiles/agov/tests
 
 test-functional:
