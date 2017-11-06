@@ -13,7 +13,6 @@ jobs:
           SIMPLETEST_BASE_URL: http://127.0.0.1
           SIMPLETEST_DB: mysql://root:root@127.0.0.1/local
           BROWSERTEST_OUTPUT_DIRECTORY: /tmp/browser_output
-          MINK_DRIVER_ARGS: '["http:\/\/127.0.0.1:8510", "\/tmp"]'
 
       - image: mariadb
         environment:
