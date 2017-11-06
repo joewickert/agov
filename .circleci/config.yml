@@ -57,7 +57,9 @@ jobs:
       - run:
           name: Start Apache
           command: |
-            /usr/local/bin/start
+            tuner --conf=apache > /etc/apache2/mods-enabled/tuner.conf
+            tuner --conf=php > /usr/local/etc/php/conf.d/tuner.ini
+            apache2ctl start
             curl -sSf http://localhost/
 
       - run:
