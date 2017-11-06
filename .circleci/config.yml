@@ -8,7 +8,7 @@ jobs:
   # Run the build and test steps.
   build:
     docker:
-      - image: previousnext/php:7.1-dev-alpha
+      - image: previousnext/php:7.1-dev
         environment:
           SIMPLETEST_BASE_URL: http://127.0.0.1
           SIMPLETEST_DB: mysql://root:root@127.0.0.1/local
@@ -53,6 +53,13 @@ jobs:
           name: Install
           command: |
             make link-profile install
+
+      - run:
+          name: Start Apache
+          command: |
+            tuner --conf=apache > /etc/apache2/mods-enabled/tuner.conf
+            tuner --conf=php > /usr/local/etc/php/conf.d/tuner.ini
+            apache2ctl start
 
       - run:
           name: Test
