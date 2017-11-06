@@ -91,7 +91,7 @@ test-unit:
 	./bin/phpunit $(APP_ROOT)/profiles/agov/tests
 
 test-functional:
-	php ./app/core/scripts/run-tests.sh --url ${APP_URL} --sqlite /tmp/test-db.sqlite --dburl "sqlite://127.0.0.1//tmp/test-db.sqlite" --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'
+	php ./app/core/scripts/run-tests.sh  --verbose --url ${APP_URL} --sqlite /tmp/test-db.sqlite --dburl "sqlite://127.0.0.1//tmp/test-db.sqlite" --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'
 
 test-init:
 	touch $(APP_ROOT)/test-output.html;
