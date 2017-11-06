@@ -30,7 +30,7 @@ init:
 devify:
 	chmod +w $(APP_ROOT)/sites/default
 	cp $(APP_ROOT)/sites/example.settings.local.php $(APP_ROOT)/sites/default/settings.local.php
-	$(DRUSH) en config_devel simpletest
+	$(DRUSH) en config_devel simpletest -y
 
 mkdirs:
 	mkdir -p $(APP_ROOT)/profiles/agov $(APP_ROOT)/sites/default/files/tmp $(APP_ROOT)/sites/default/private build/logs/simpletest build/browser_output
