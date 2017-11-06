@@ -53,12 +53,12 @@ jobs:
           name: Install
           command: |
             make link-profile install
-            ./bin/drush st
-            curl -v http://127.0.0.1/ > /dev/null
 
       - run:
           name: Start Apache
-          command: "/usr/local/bin/start"
+          command: |
+            /usr/local/bin/start
+            curl -sSf http://localhost/
 
       - run:
           name: Test
