@@ -28,9 +28,6 @@ jobs:
 
       - checkout
 
-      - run:
-          command: "/usr/local/bin/start"
-
       - restore_cache:
           keys:
             - agov-v1-{{ arch }}-{{ checksum "composer.lock" }}
@@ -58,6 +55,10 @@ jobs:
             make link-profile install
             ./bin/drush st
             curl -v http://127.0.0.1/ > /dev/null
+
+      - run:
+          name: Start Apache
+          command: "/usr/local/bin/start"
 
       - run:
           name: Test
