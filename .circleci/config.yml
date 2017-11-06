@@ -53,7 +53,8 @@ jobs:
           name: Install
           command: |
             make link-profile install
-            curl http://127.0.0.1 > /dev/null
+            sleep 30
+            curl -v http://127.0.0.1/ > /dev/null
 
       - run:
           name: Test
