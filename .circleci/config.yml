@@ -12,7 +12,7 @@ jobs:
         environment:
           SIMPLETEST_BASE_URL: http://127.0.0.1
           SIMPLETEST_DB: mysql://root:root@127.0.0.1/local
-          BROWSERTEST_OUTPUT_DIRECTORY: /tmp/browser_output
+          BROWSERTEST_OUTPUT_DIRECTORY: /data/build/browser_output
 
       - image: mariadb
         environment:
@@ -24,8 +24,7 @@ jobs:
       - image: previousnext/gastonjs:1.0.2
 
     working_directory: /data
-    command: "/usr/local/bin/start-dev"
-
+    command: "/usr/local/bin/start"
     steps:
       - checkout
 
