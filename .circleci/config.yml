@@ -24,6 +24,7 @@ jobs:
       - image: previousnext/gastonjs:1.0.2
 
     working_directory: /data
+    command: "/usr/local/bin/start-dev"
 
     steps:
       - checkout
@@ -53,7 +54,7 @@ jobs:
           name: Install
           command: |
             make link-profile install
-            sleep 30
+            ./bin/drush st
             curl -v http://127.0.0.1/ > /dev/null
 
       - run:
