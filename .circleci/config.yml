@@ -24,8 +24,11 @@ jobs:
       - image: previousnext/gastonjs:1.0.2
 
     working_directory: /data
-    command: "/usr/local/bin/start"
     steps:
+
+      - run:
+          command: "/usr/local/bin/start"
+
       - checkout
 
       - restore_cache:
