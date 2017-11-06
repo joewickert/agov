@@ -84,9 +84,14 @@ test-ci:
 	# One remaining legacy Simpletest that is dependent on InstallerTestBase.
 	sudo -u www-data ${CIRCLE_PHP} ./app/core/scripts/run-tests.sh --url ${APP_URI} --sqlite /tmp/test-db.sqlite --dburl sqlite://127.0.0.1//tmp/test-db.sqlite --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'
 
-test:
+test: test-unit test-functional
+
+test-unit:
+	echo "Mink args: $MINK_DRIVER_ARGS"
 	./bin/phpunit $(APP_ROOT)/profiles/agov/tests
-	php ./app/core/scripts/run-tests.sh --url ${APP_URL} --sqlite /tmp/test-db.sqlite --dburl sqlite://127.0.0.1//tmp/test-db.sqlite --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'
+
+test-functional:
+	php ./app/core/scripts/run-tests.sh --url ${APP_URL} --sqlite /tmp/test-db.sqlite --dburl "sqlite://127.0.0.1//tmp/test-db.sqlite" --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'
 
 test-init:
 	touch $(APP_ROOT)/test-output.html;
