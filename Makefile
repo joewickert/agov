@@ -93,7 +93,7 @@ test-simpletest:
 	$(DRUSH) en simpletest -y
 	mkdir -p app/sites/simpletest
 	chown -R www-data:www-data app/sites/simpletest
-	chmod +w +t app/sites/simpletest
+	chmod +wt app/sites/simpletest
 	php ./app/core/scripts/run-tests.sh  --browser --verbose --url ${APP_URL} --dburl "$(DB_URL)" --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'
 
 test-init:
