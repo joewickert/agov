@@ -12,7 +12,7 @@ jobs:
         environment:
           SIMPLETEST_BASE_URL: http://127.0.0.1
           SIMPLETEST_DB: mysql://root:root@127.0.0.1/local
-          BROWSERTEST_OUTPUT_DIRECTORY: /data/build/browser_output
+          BROWSERTEST_OUTPUT_DIRECTORY: /data/app/sites/simpletest/browser_output
 
       - image: mariadb
         environment:
@@ -75,5 +75,5 @@ jobs:
           path: build/logs
 
       - store_artifacts:
-          path: /build/browser_output
+          path: app/sites/simpletest/browser_output
           destination: tr1

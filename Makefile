@@ -91,7 +91,7 @@ test-phpunit:
 
 test-simpletest:
 	$(DRUSH) en simpletest -y
-	php ./app/core/scripts/run-tests.sh  --verbose --url ${APP_URL} --dburl "$(DB_URL)" --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'
+	php ./app/core/scripts/run-tests.sh  --browser --verbose --url ${APP_URL} --dburl "$(DB_URL)" --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'
 
 test-init:
 	touch $(APP_ROOT)/test-output.html;
