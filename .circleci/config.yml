@@ -62,9 +62,14 @@ jobs:
             apache2ctl start
 
       - run:
-          name: Test
+          name: Test PHPUnit
           command: |
-            make test
+            make test-phpunit
+
+      - run:
+          name: Test Simpletest
+          command: |
+            make test-simpletest
 
       - store_test_results:
           path: build/logs
