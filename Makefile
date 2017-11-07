@@ -91,10 +91,10 @@ test-phpunit:
 
 test-simpletest:
 	$(DRUSH) en simpletest -y
-	mkdir -p app/sites/simpletest
-	chown -R www-data:www-data app/sites/simpletest
-	chmod +wt app/sites/simpletest
-	php ./app/core/scripts/run-tests.sh  --browser --verbose --url ${APP_URL} --dburl "$(DB_URL)" --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'
+	mkdir -p $(APP_ROOT)/sites/default/files/simpletest
+	chown -R www-data:www-data $(APP_ROOT)/sites/default/files
+	chmod -R 775 $(APP_ROOT)/sites/default/files
+	gosu www-data:www-data bash -c "php ./app/core/scripts/run-tests.sh  --browser --verbose --url ${APP_URL} --dburl '$(DB_URL)' --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'"
 
 test-init:
 	touch $(APP_ROOT)/test-output.html;
