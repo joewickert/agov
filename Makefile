@@ -33,7 +33,7 @@ devify:
 	$(DRUSH) en config_devel simpletest -y
 
 mkdirs:
-	mkdir -p $(APP_ROOT)/profiles/agov $(APP_ROOT)/sites/default/files/tmp $(APP_ROOT)/sites/default/private build/logs/simpletest build/browser_output
+	mkdir -p $(APP_ROOT)/profiles/agov $(APP_ROOT)/sites/default/files/tmp $(APP_ROOT)/sites/default/private build/logs/simpletest app/sites/simpletest/browser_output
 
 link-profile:
 	cd $(APP_ROOT)/profiles/agov && ln -svf ../../../agov.* ../../../config ../../../modules ../../../src ../../../tests .

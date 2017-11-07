@@ -76,4 +76,9 @@ jobs:
 
       - store_artifacts:
           path: app/sites/simpletest/browser_output
-          destination: tr1
+          destination: phpunit
+
+      - store_artifacts:
+          path: app/sites/default/files/simpletest/verbose/
+          destination: simpletest
+
