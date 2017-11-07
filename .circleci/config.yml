@@ -81,4 +81,3 @@ jobs:
       - store_artifacts:
           path: app/sites/default/files/simpletest/verbose/
           destination: simpletest
-
