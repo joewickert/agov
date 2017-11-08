@@ -91,9 +91,9 @@ test-phpunit:
 
 test-simpletest:
 	$(DRUSH) en simpletest -y
-	mkdir -p $(APP_ROOT)/sites/default/files/simpletest
-	chown -R www-data:www-data $(APP_ROOT)/sites/default/files
-	chmod -R 775 $(APP_ROOT)/sites/default/files
+	mkdir -p $(APP_ROOT)/sites/simpletest
+	chown -R www-data:www-data $(APP_ROOT)/sites/simpletest
+	chmod -R 775 $(APP_ROOT)/sites/simpletest
 	gosu www-data:www-data bash -c "php ./app/core/scripts/run-tests.sh  --browser --verbose --url ${APP_URL} --dburl '$(DB_URL)' --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'"
 
 test-init:
