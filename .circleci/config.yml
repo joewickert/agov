@@ -87,6 +87,7 @@ jobs:
       - run:
           name: Push to Drupal.org
           command: |
+            ssh-keyscan git.drupal.org >> /root/.ssh/known_hosts
             git remote add dorg pnx-bot@git.drupal.org:project/agov.git
             git push dorg 8.x-2.x
 
