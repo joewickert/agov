@@ -7,9 +7,12 @@ use Drupal\simpletest\InstallerTestBase;
 /**
  * Test the configurable dependencies installer.
  *
+ * TODO: move this to a subclass of BrowserTestBase once
+ *  https://www.drupal.org/node/2907728 lands.
+ *
  * @group agov
  */
-class ConfigurableDependenciesTest extends InstallerTestBase {
+abstract class ConfigurableDependenciesTest extends InstallerTestBase {
 
   /**
    * Override the installation profile to our testing profile.
