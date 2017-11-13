@@ -61,15 +61,10 @@ jobs:
             tuner --conf=php > /usr/local/etc/php/conf.d/tuner.ini
             apache2ctl start
 
-#      - run:
-#          name: Test PHPUnit
-#          command: |
-#            make test-phpunit
-
       - run:
-          name: Test Simpletest
+          name: Test PHPUnit
           command: |
-            make test-simpletest
+            make test-phpunit
 
       - store_test_results:
           path: build/logs

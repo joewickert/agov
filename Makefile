@@ -84,10 +84,10 @@ test-ci:
 	# One remaining legacy Simpletest that is dependent on InstallerTestBase.
 	sudo -u www-data ${CIRCLE_PHP} ./app/core/scripts/run-tests.sh --url ${APP_URI} --sqlite /tmp/test-db.sqlite --dburl sqlite://127.0.0.1//tmp/test-db.sqlite --class 'Drupal\agov\Tests\ConfigurableDependenciesTest'
 
-test: test-phpunit test-simpletest
+test: test-phpunit
 
 test-phpunit:
-	./bin/phpunit $(APP_ROOT)/profiles/agov/tests
+	./bin/phpunit $(APP_ROOT)/profiles/agov/tests --log-junit $(BUILD_LOGS_DIR)/phpunit/phpunit.xml
 
 test-simpletest:
 	$(DRUSH) en simpletest -y
