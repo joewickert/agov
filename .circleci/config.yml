@@ -76,3 +76,29 @@ jobs:
       - store_artifacts:
           path: app/sites/default/files/simpletest/verbose/
           destination: simpletest
+
+
+  push:
+    docker:
+      - image: previousnext/php:7.1-dev
+    working_directory: /data
+    steps:
+      - checkout
+      - run:
+          name: Push to Drupal.org
+          command: |
+            git remote add dorg pnx-bot@git.drupal.org:project/agov.git
+            git push dorg 8.x-2.x
+
+workflows:
+  version: 2
+  build_and_push:
+    jobs:
+      - build
+      - push:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - 8.x-2.x
