@@ -101,6 +101,7 @@ config_devel:
   # Permissions.
   - user.role.anonymous
   - user.role.authenticated
+  - user.role.editor
 
   # Filter formats
   - filter.format.basic_html
