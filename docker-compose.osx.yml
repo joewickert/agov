@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  php:
+  app:
     image: previousnext/php:7.1-dev
     # You will notice that we are forwarding port which do not belong to PHP.
     # We have to declare them here because these "sidecar" services are sharing
@@ -32,7 +32,7 @@ services:
 
   db:
     image: mariadb
-    network_mode: service:php
+    network_mode: service:app
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=local
@@ -43,15 +43,15 @@ services:
 
 #  varnish:
 #    image: previousnext/varnish:4.x-dev
-#    network_mode: service:php
+#    network_mode: service:app
 
 #  memcache:
 #    image: memcached:1.4-alpine
-#    network_mode: service:php
+#    network_mode: service:app
 
   mail:
     image: mailhog/mailhog
-    network_mode: service:php
+    network_mode: service:app
 
 #  phantomjs:
 #    image: previousnext/gastonjs:1.0.2

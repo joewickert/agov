@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  php:
+  app:
     image: previousnext/php:7.1-dev
     # This makes the container run on the same network stack as your
     # workstation. Meaning that you can interact on "localhost".
