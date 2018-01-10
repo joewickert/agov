@@ -26,19 +26,28 @@ settings:
           items:
             - BulletedList
             - NumberedList
+            - Indent
+            - Outdent
         -
           name: Media
           items:
             - Blockquote
-            - DrupalImage
+            - media_embed
         -
           name: Tools
           items:
             - Styles
             - Source
+        -
+          name: Paste
+          items:
+            - PasteText
+            - PasteFromWord
   plugins:
     stylescombo:
       styles: "a.button|Button\r\na.button--large|Button Large\r\na.button--wide|Button Wide\r\n\r\n"
+    language:
+      language_list: un
 image_upload:
   status: true
   scheme: public
