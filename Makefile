@@ -28,8 +28,7 @@ init:
 	$(COMPOSER) install --prefer-dist --no-progress --no-suggest --no-interaction --optimize-autoloader
 
 devify:
-	chmod +w $(APP_ROOT)/sites/default
-	cp $(APP_ROOT)/sites/example.settings.local.php $(APP_ROOT)/sites/default/settings.local.php
+	chmod -R +w app/sites/default
 	$(DRUSH) en config_devel simpletest -y
 
 mkdirs:
@@ -119,4 +118,4 @@ patchy:
 	git add config-export
 	git commit -m "[PATCHY] Update config"
 
-.PHONY: list build init mkdirs sql-drop updb entity-updates cache-rebuild styleguide db-sync config-import config-export phpcbf phpcs ci-lint-php ci-prepare ci-test test test-init login default patchy
+.PHONY: list build init mkdirs sql-drop updb entity-updates cache-rebuild styleguide db-sync config-import config-export phpcbf phpcs ci-lint-php ci-prepare ci-test test test-init login default patchy install
