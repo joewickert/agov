@@ -49,6 +49,7 @@ class DefaultConfigTest extends KernelTestBase {
     'help',
     'image',
     'menu_ui',
+    'media',
     'options',
     'path',
     'page_cache',
@@ -66,14 +67,15 @@ class DefaultConfigTest extends KernelTestBase {
     'link',
     'layout_discovery',
 
-    'media_entity',
     'media_entity_browser',
     'media_entity_image',
     'video_embed_media',
+    'video_embed_field',
     'entity_embed',
     'entity_browser',
     'entity_browser_entity_form',
     'entity_browser',
+    'pnx_media',
 
     'ds',
     'link_attributes',
@@ -169,9 +171,11 @@ class DefaultConfigTest extends KernelTestBase {
 
     // Install the required schema and config for core modules.
     $this->installSchema('system', 'router');
+    $this->installSchema('file', 'file_usage');
     $this->installEntitySchema('block_content');
     $this->installEntitySchema('block_content_type');
     $this->installEntitySchema('file');
+    $this->installEntitySchema('media');
     $this->installConfig(self::$modules);
 
     // Install the default config for our installation profile.
@@ -192,6 +196,7 @@ class DefaultConfigTest extends KernelTestBase {
    * @dataProvider providerTestModuleConfig
    */
   public function testModuleConfig($module) {
+
     $this->container->get('module_installer')
       ->install([$module]);
 

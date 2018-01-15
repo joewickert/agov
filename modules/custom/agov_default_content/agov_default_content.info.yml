@@ -11,9 +11,8 @@ dependencies:
   - page_manager
   - block_content
   - agov_article
-  - agov_media
-  - panels
   - views
+  - panels
 
 config_devel:
   - block.block.stayuptodate

@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_standard_page_media
-    - media_entity.bundle.image
+    - media.type.image
     - node.type.standard_page
 id: node.standard_page.field_standard_page_media
 field_name: field_standard_page_media

@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Install hooks for agov media.
+ */
+
+/**
+ * Update embed button icons.
+ */
+function agov_media_install() {
+  $data = file_get_contents(dirname(__FILE__) . "/images/documents.png");
+  /** @var \Drupal\file\FileInterface $file */
+  if ($file = file_save_data($data, 'public://document_browser_icon.png', FILE_EXISTS_REPLACE)) {
+    $file->set('uuid', '97C9A799-B3E4-4714-91A9-AE99523B5741');
+    $file->save();
+    \Drupal::service('file.usage')
+      ->add($file, 'embed', 'embed_button', 'media_documents');
+  }
+  $data = file_get_contents(dirname(__FILE__) . "/images/images.png");
+  /** @var \Drupal\file\FileInterface $file */
+  if ($file = file_save_data($data, 'public://image_browser_icon.png', FILE_EXISTS_REPLACE)) {
+    $file->set('uuid', '790318D7-39D6-417F-86EF-F73C24E2BD17');
+    $file->save();
+    \Drupal::service('file.usage')
+      ->add($file, 'embed', 'embed_button', 'media_image');
+  }
+  $data = file_get_contents(dirname(__FILE__) . "/images/video.png");
+  /** @var \Drupal\file\FileInterface $file */
+  if ($file = file_save_data($data, 'public://video_browser_icon.png', FILE_EXISTS_REPLACE)) {
+    $file->set('uuid', '789DB1BC-9A2A-4B1D-A8DD-1561EA24D335');
+    $file->save();
+    \Drupal::service('file.usage')
+      ->add($file, 'embed', 'embed_button', 'media_video');
+  }
+}

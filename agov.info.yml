@@ -21,6 +21,7 @@ dependencies:
   - help
   - image
   - layout_discovery
+  - media
   - menu_ui
   - options
   - path
@@ -44,6 +45,8 @@ dependencies:
   - pathauto
   - twitter_block
   - page_manager
+  - pnx_media
+  - pnx_media_embed
   - fences
   - token
   - text_icon

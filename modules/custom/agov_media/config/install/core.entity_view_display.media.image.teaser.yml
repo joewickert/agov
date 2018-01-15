@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.media.teaser
     - field.field.media.image.field_media_image
     - image.style.media_teaser_medium
-    - media_entity.bundle.image
+    - media.type.image
   module:
     - fences
     - image

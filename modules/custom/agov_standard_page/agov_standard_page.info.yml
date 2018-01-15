@@ -4,9 +4,6 @@ description: 'Provide a standard page bundle.'
 package: aGov
 core: '8.x'
 
-dependencies:
-  - agov_media
-
 config_devel:
   - core.base_field_override.node.standard_page.promote
   - core.entity_form_display.node.standard_page.default
