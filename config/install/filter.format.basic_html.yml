@@ -4,6 +4,8 @@ dependencies:
   module:
     - editor
     - entity_embed
+    - linkit
+    - linky
 name: 'Basic HTML'
 format: basic_html
 weight: 0
@@ -12,44 +14,76 @@ filters:
     id: filter_html
     provider: filter
     status: true
-    weight: -10
+    weight: -46
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <p> <br> <span> <a href class=" button button--large button--wide"> <img src data-entity-type data-entity-uuid data-align data-caption alt> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button>'
+      allowed_html: '<em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <p> <br> <span> <img src data-entity-type data-entity-uuid data-entity-substitution data-align data-caption alt> <drupal-entity data-entity-type data-entity-uuid data-entity-substitution data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button> <a href !href accesskey id rel target title data-entity-type data-entity-uuid data-entity-substitution class=" button button--large button--wide">'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
     id: filter_align
     provider: filter
-    status: true
-    weight: 7
+    status: false
+    weight: -45
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
-    status: true
-    weight: 8
+    status: false
+    weight: -44
     settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
     status: true
-    weight: 10
+    weight: -42
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor
     status: true
-    weight: 11
+    weight: -49
     settings: {  }
   filter_autop:
     id: filter_autop
     provider: filter
     status: true
-    weight: 0
+    weight: -50
     settings: {  }
   entity_embed:
     id: entity_embed
     provider: entity_embed
     status: true
-    weight: 0
+    weight: -43
     settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -41
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: -40
+    settings:
+      filter_url_length: 72
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -39
+    settings: {  }
+  linky_direct_link_filter:
+    id: linky_direct_link_filter
+    provider: linky
+    status: true
+    weight: -47
+    settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -48
+    settings:
+      title: true

@@ -76,6 +76,8 @@ class DefaultConfigTest extends KernelTestBase {
     'entity_browser_entity_form',
     'entity_browser',
     'pnx_media',
+    'linky',
+    'linkit',
 
     'ds',
     'link_attributes',

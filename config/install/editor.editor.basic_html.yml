@@ -39,6 +39,9 @@ settings:
             - Styles
             - Source
   plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default
     stylescombo:
       styles: "a.button|Button\r\na.button--large|Button Large\r\na.button--wide|Button Wide\r\n\r\n"
     language:

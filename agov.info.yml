@@ -42,6 +42,8 @@ dependencies:
   # Contrib modules
   - admin_toolbar
   - better_normalizers
+  - linkit
+  - linky
   - pathauto
   - twitter_block
   - page_manager

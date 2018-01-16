@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - linky
+    - node
+id: default
+label: Default
+description: 'A default LinkIt profile.'
+matchers:
+  9da9c383-cd7f-4530-8931-06d3844172a4:
+    uuid: 9da9c383-cd7f-4530-8931-06d3844172a4
+    id: 'entity:node'
+    weight: 0
+    settings:
+      bundles:
+        article: article
+        publication: publication
+        standard_page: standard_page
+      group_by_bundle: true
+      include_unpublished: true
+      substitution_type: canonical
+      metadata: 'by [node:author] | [node:created:medium]'
+  1d9262f7-6109-4c9d-93b2-12f7a114b00f:
+    uuid: 1d9262f7-6109-4c9d-93b2-12f7a114b00f
+    id: 'entity:linky'
+    weight: 0
+    settings:
+      metadata: 'by [linky:user_id] | [linky:created]'
+      bundles: null
+      group_by_bundle: null
+      substitution_type: canonical

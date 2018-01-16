@@ -12,4 +12,5 @@ permissions:
   - 'use text format basic_html'
   - 'use text format plain_text'
   - 'view files'
+  - 'view linky entities'
   - 'view media'
