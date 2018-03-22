@@ -8,7 +8,7 @@ APP_URI=http://agov.dev
 APP_PASSWORD=password
 
 DRUSH_CMD=drush -r ${APP_DIR}
-DB_URL=mysql://drupal:drupal@localhost/local
+DB_URL=mysql://drupal:drupal@127.0.0.1/local
 INSTALL_OPTIONS=configurable_profile_dependencies.configurable_modules[agov_default_content]=0 \
 	configurable_profile_dependencies.configurable_modules[agov_password_policy]=0 \
 	configurable_profile_dependencies.configurable_modules[agov_workbench]=0 \
