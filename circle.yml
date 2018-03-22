@@ -2,7 +2,7 @@ machine:
   timezone:
     Australia/Perth
   php:
-    version: 5.6.22
+    version: 5.6.14
   hosts:
     agov.dev: 127.0.0.1
 
@@ -15,10 +15,10 @@ dependencies:
     - vendor
     - bin
   pre:
-    - echo "date.timezone = Australia/Perth" > ~/.phpenv/versions/$(phpenv global)/etc/conf.d/timezone.ini
+    - echo "date.timezone = Australia/Perth" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
     # Tell composer to ignore any changes.
     - composer config --global discard-changes true
-    - echo "memory_limit = 256M" > ~/.phpenv/versions/$(phpenv global)/etc/conf.d/memory.ini
+    - echo "memory_limit = 256M" > /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini
 
     # Symlink some binaries so they're accessible globally.
     - ln -s `pwd`/bin/drush /home/ubuntu/bin/drush
