@@ -22,8 +22,8 @@ PHPCS_EXCLUSIONS=""
 PHPCS_REPORT_FILE="build/logs/checkstyle.xml"
 PHPCS_DIRS=agov/modules/custom agov/agov.install agov/agov.profile agov/src agov/tests
 
-CIRCLE_PHP=/home/ubuntu/.phpenv/shims/php
-CIRCLE_PHP_VERSION?=5.5.11
+CIRCLE_PHP=/opt/circleci/.phpenv/shims/php
+CIRCLE_PHP_VERSION?=5.6.22
 
 EXPORT_MODULES=agov agov_standard_page agov_article agov_publication agov_default_content agov_password_policy agov_scheduled_updates agov_media agov_social_icons
 
