@@ -4,7 +4,7 @@ cc_green="\033[0;32m" #Change text to green.
 cc_end="\033[0m" #Change text back to normal.
 
 APP_DIR=${PWD}/app
-APP_URI=http://agov.dev
+APP_URI=http://127.0.0.1
 APP_PASSWORD=password
 
 DRUSH_CMD=drush -r ${APP_DIR}
