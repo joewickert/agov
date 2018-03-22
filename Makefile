@@ -94,7 +94,7 @@ content-export:
 
 ci-vhost:
 	@echo ${cc_green}"PHP version: "${CIRCLE_PHP_VERSION}${cc_end}
-	sudo cp vhost /etc/apache2/sites-available/agov
+	sudo cp vhost /etc/apache2/sites-available/agov.conf
 	sudo sed -i -e 's@##app.uri##@${APP_URI}@g' -e 's@##app.dir##@${APP_DIR}@g' -e 's@##php.version##@${CIRCLE_PHP_VERSION}@g' /etc/apache2/sites-available/agov
 	a2ensite agov
 	a2enmod rewrite
