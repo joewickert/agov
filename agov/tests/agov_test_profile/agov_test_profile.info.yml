@@ -1,7 +1,6 @@
 name: aGov Test Profile
 type: profile
 description: 'Minimal profile for testing aGov configurable dependencies.'
-version: VERSION
 core: 8.x
 hidden: true
 

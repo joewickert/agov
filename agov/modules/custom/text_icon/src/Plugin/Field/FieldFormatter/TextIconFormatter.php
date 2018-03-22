@@ -27,9 +27,9 @@ class TextIconFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public static function defaultSettings() {
-    return array(
+    return [
       'icon_sprite' => '',
-    ) + parent::defaultSettings();
+    ] + parent::defaultSettings();
   }
 
   /**
@@ -38,12 +38,12 @@ class TextIconFormatter extends FormatterBase {
   public function settingsForm(array $form, FormStateInterface $form_state) {
     $elements = parent::settingsForm($form, $form_state);
 
-    $elements['icon_sprite'] = array(
+    $elements['icon_sprite'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Icon sprite location'),
       '#default_value' => $this->getSetting('icon_sprite'),
       '#description' => $this->t('Enter the location to your icon sprite.'),
-    );
+    ];
 
     return $elements;
   }
@@ -52,11 +52,11 @@ class TextIconFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public function settingsSummary() {
-    $summary = array();
+    $summary = [];
     $settings = $this->getSettings();
 
     if (!empty($settings['icon_sprite'])) {
-      $summary[] = $this->t('Sprite location: @icon_sprite', array('@icon_sprite' => $settings['icon_sprite']));
+      $summary[] = $this->t('Sprite location: @icon_sprite', ['@icon_sprite' => $settings['icon_sprite']]);
     }
     return $summary;
   }
@@ -65,16 +65,16 @@ class TextIconFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
-    $element = array();
+    $element = [];
 
     foreach ($items as $delta => $item) {
-      $element[$delta] = array(
+      $element[$delta] = [
         '#type' => 'markup',
-        '#markup' => new FormattableMarkup('<svg role="presentation"><use xlink:href=":path#:icon" /></svg>', array(
+        '#markup' => new FormattableMarkup('<svg role="presentation"><use xlink:href=":path#:icon" /></svg>', [
           ':path' => $this->getSetting('icon_sprite'),
           ':icon' => $item->value,
-        )),
-      );
+        ]),
+      ];
     }
 
     return $element;

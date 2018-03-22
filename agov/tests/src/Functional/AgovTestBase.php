@@ -16,7 +16,7 @@ abstract class AgovTestBase extends BrowserTestBase {
    */
   protected $profile = 'agov';
 
-  protected static $configSchemaCheckerExclusions = array(
+  protected static $configSchemaCheckerExclusions = [
     // Following are used to test lack of or partial schema. Where partial
     // schema is provided, that is explicitly tested in specific tests.
     'config_schema_test.noschema',
@@ -32,6 +32,6 @@ abstract class AgovTestBase extends BrowserTestBase {
     'views.view.media_entity_browser',
     'simple_sitemap.custom',
     'simple_sitemap.settings',
-  );
+  ];
 
 }

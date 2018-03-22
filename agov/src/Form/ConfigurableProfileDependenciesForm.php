@@ -73,13 +73,13 @@ class ConfigurableProfileDependenciesForm extends FormBase {
       $form['#suffix'] = $this->t('There are no available modules at this time.');
     }
 
-    $form['actions'] = array('#type' => 'actions');
-    $form['actions']['save'] = array(
+    $form['actions'] = ['#type' => 'actions'];
+    $form['actions']['save'] = [
       '#type' => 'submit',
       '#value' => $this->t('Save and continue'),
       '#button_type' => 'primary',
-      '#submit' => array('::submitForm'),
-    );
+      '#submit' => ['::submitForm'],
+    ];
 
     return $form;
   }
