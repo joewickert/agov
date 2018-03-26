@@ -1,8 +1,10 @@
+uuid: 765f2b0e-e713-415d-b1b2-9a4b7a121e7b
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.media.video.field_media_video_embed_field
+    - field.field.media.video.field_media_video_file
     - media.type.video
   module:
     - fences
@@ -32,6 +34,7 @@ content:
     region: content
 hidden:
   created: true
+  field_media_video_file: true
   name: true
   thumbnail: true
   uid: true

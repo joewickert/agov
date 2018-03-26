@@ -30,7 +30,6 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - workbench_moderation_control
         - field_article_media
         - node_title
         - body

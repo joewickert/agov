@@ -120,7 +120,6 @@ variant_settings:
       region: body_right
       weight: -9
       uuid: b5653be6-074d-42b1-8f00-d42a65c520f5
-      expand_all_items: 0
       context_mapping: {  }
     fdfe7e49-b906-456a-8156-864b7c371906:
       id: 'block_content:69e9555f-f0f3-4dd6-b905-5b1efffa120f'

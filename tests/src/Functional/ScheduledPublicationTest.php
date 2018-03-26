@@ -14,7 +14,11 @@ class ScheduledPublicationTest extends AgovTestBase {
    *
    * @var array
    */
-  public static $modules = ['agov_scheduled_updates', 'agov_workbench'];
+  public static $modules = [
+    'agov_scheduled_updates',
+    'agov_workbench',
+    'content_moderation',
+  ];
 
   /**
    * The admin user.

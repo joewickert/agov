@@ -21,7 +21,7 @@ list:
 	@$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1n}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
 
 clean:
-	chmod +w $(APP_ROOT)/sites/default
+	chmod +w $(APP_ROOT)/sites/default || true
 	rm -rf $(APP_ROOT)
 
 init:
@@ -32,7 +32,7 @@ devify:
 	$(DRUSH) en config_devel simpletest -y
 
 mkdirs:
-	mkdir -p $(APP_ROOT)/profiles/agov $(APP_ROOT)/sites/default/files/tmp $(APP_ROOT)/sites/default/private build/logs/simpletest app/sites/simpletest/browser_output
+	mkdir -p $(APP_ROOT)/profiles/agov $(APP_ROOT)/sites/default/files/tmp $(APP_ROOT)/sites/default/private build/logs/simpletest build/browser_output
 
 link-profile:
 	cd $(APP_ROOT)/profiles/agov && ln -svf ../../../agov.* ../../../config ../../../modules ../../../src ../../../tests .
