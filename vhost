@@ -1,11 +1,9 @@
-Listen 8080
-
 <VirtualHost *:80>
-  LoadModule php5_module /home/ubuntu/.phpenv/versions/5.5.11/libexec/apache2/libphp5.so
-
-  DocumentRoot ##app.dir##
-  ServerName ##app.uri##
-  <FilesMatch \.php$>
-    SetHandler application/x-httpd-php
-  </FilesMatch>
+  DocumentRoot /home/ubuntu/agov/app
+  ServerName agov.dev
+  <Directory />
+     Options FollowSymlinks
+     AllowOverride All
+     Require all granted
+  </Directory>
 </VirtualHost>

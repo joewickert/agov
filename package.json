@@ -14,7 +14,7 @@
     "gulp-scss-lint": "^0.3.0",
     "gulp-shell": "^0.4.3",
     "gulp-size": "^2.0.0",
-    "kss": "kss-node/kss-node",
+    "kss": "github:kss-node/kss-node",
     "run-sequence": "^1.1.2"
   },
   "engines": {

@@ -10,8 +10,8 @@
   <!-- Properties -->
   <!-- ========== -->
 
-  <!-- Application --> 
-  <property name="app.uri"             value="http://agov.dev"                           override="true" />
+  <!-- Application -->
+  <property name="app.uri"             value="http://127.0.0.1"                          override="true" />
   <property name="app.name"            value="aGov"                                      override="true" />
   <property name="app.dir"             value="${project.basedir}/app"                    override="true" />
   <property name="app.profile.name"    value="agov"                                      override="true" />
@@ -37,7 +37,7 @@
   <property name="gulp.cmd" value="${project.basedir}/node_modules/.bin/gulp" override="true" />
 
   <!-- Database -->
-  <property name="db.querystring" value="mysql://drupal:drupal@localhost/local" override="true" />
+  <property name="db.querystring" value="mysql://drupal:drupal@127.0.0.1/local" override="true" />
 
   <!-- These allow developers to override configuration on
        a per environment basis -->
@@ -168,23 +168,6 @@
           command="${gulp.cmd} build"
           logoutput="true"
           passthru="true" />
-  </target>
-
-  <target name="ci:vhost">
-    <copy file="vhost"
-          tofile="/etc/apache2/sites-available/${phing.project.name}">
-      <filterchain>
-        <replaceregexp>
-          <regexp pattern="##app.uri##" replace="${app.uri}"
-                  ignoreCase="true"/>
-          <regexp pattern="##app.dir##" replace="${app.dir}"
-                  ignoreCase="true"/>
-        </replaceregexp>
-      </filterchain>
-    </copy>
-    <exec command="a2ensite ${phing.project.name}"/>
-    <exec command="a2enmod rewrite"/>
-    <exec command="sudo service apache2 restart"/>
   </target>
 
   <target name="phpcs"

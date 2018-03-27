@@ -2,7 +2,9 @@ machine:
   timezone:
     Australia/Perth
   php:
-    version: 5.5.11
+    version: 5.6.22
+  node:
+      version: 8.6.0
   hosts:
     agov.dev: 127.0.0.1
 
@@ -11,10 +13,16 @@ dependencies:
     - vendor
     - bin
   pre:
-    - echo "date.timezone = Australia/Perth" > ~/.phpenv/versions/$(phpenv global)/etc/conf.d/timezone.ini
+    - echo "date.timezone = Australia/Perth" > /opt/circleci/php/$(phpenv global)/etc/conf.d/timezone.ini
     # Tell composer to ignore any changes.
     - composer config --global discard-changes true
-    - echo "memory_limit = 256M" > ~/.phpenv/versions/$(phpenv global)/etc/conf.d/memory.ini
+    - echo "memory_limit = 256M" > /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini
+    - sudo unlink /usr/lib/apache2/modules/libphp5.so
+    - sudo ln -s $PHPENV_ROOT/versions/$(phpenv global)/usr/lib/apache2/modules/libphp5.so /usr/lib/apache2/modules/libphp5.so
+    - sudo cp vhost /etc/apache2/sites-available/agov.conf
+    - sudo a2ensite agov
+    - sudo a2dissite 000-default
+    - sudo a2enmod rewrite
 
     # Symlink some binaries so they're accessible globally.
     - ln -s `pwd`/bin/drush /home/ubuntu/bin/drush
@@ -25,10 +33,10 @@ dependencies:
     - composer install --prefer-dist --dev
     - npm install
     - bundle install --path vendor/bundle
-    - phing ci:vhost
     - phing clean
     - phing prepare
     - phing make
+    - sudo service apache2 restart
     - phing install -verbose
     - mkdir app/sites/simpletest
     - chmod 777 app/sites/simpletest
