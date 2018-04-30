@@ -30,7 +30,6 @@ jobs:
 
       - restore_cache:
           keys:
-            - agov-v1-{{ arch }}-{{ checksum "composer.lock" }}
             - agov-v1-{{ arch }}
 
       - run:
@@ -40,7 +39,7 @@ jobs:
             make mkdirs
 
       - save_cache:
-          key: agov-v1-{{ arch }}-{{ checksum "composer.lock" }}
+          key: agov-v1-{{ arch }}
           paths:
             - /root/.composer
 
