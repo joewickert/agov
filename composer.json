@@ -19,7 +19,6 @@
     "require": {
         "composer/installers": "~1.2",
         "cweagans/composer-patches": "~1.5",
-        "drupal/admin_toolbar": "~1.18",
         "drupal/agov_base": "1.x-dev",
         "drupal/agov_whitlam": "1.x-dev",
         "drupal/better_normalizers": "~1.0",
